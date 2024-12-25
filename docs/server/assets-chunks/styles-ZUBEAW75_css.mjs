@@ -1,0 +1,2 @@
+export default `:root{--primary-blue: #007bff;--white: #ffffff;--gray-light: #f8f9fa;--gray-dark: #212529}body{font-family:Inter,Arial,sans-serif;background-color:var(--gray-light);color:var(--gray-dark);margin:0;padding:0}h1,h2,h3{color:var(--primary-blue);font-weight:700}a{color:var(--primary-blue);text-decoration:none}a:hover{text-decoration:underline}button{background-color:var(--primary-blue);color:var(--white);border:none;padding:.5rem 1rem;font-size:1rem;border-radius:.25rem;cursor:pointer}button:hover{background-color:darken(var(--primary-blue),10%)}
+`;
