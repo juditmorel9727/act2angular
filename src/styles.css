@@ -1,0 +1,48 @@
+/* Definimos las variables de color */
+:root {
+    --primary-blue: #007bff; /* Azul principal */
+    --white: #ffffff; /* Blanco */
+    --gray-light: #f8f9fa; /* Gris claro */
+    --gray-dark: #212529; /* Gris oscuro */
+  }
+  
+  /* Aplicamos un fondo claro y texto oscuro al cuerpo */
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: var(--gray-light);
+    color: var(--gray-dark);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos comunes para títulos */
+  h1, h2, h3 {
+    color: var(--primary-blue);
+    font-weight: bold;
+  }
+  
+  /* Enlaces */
+  a {
+    color: var(--primary-blue);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Botones */
+  button {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: darken(var(--primary-blue), 10%);
+  }
+  

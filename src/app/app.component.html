@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Framework</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 0.5rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #00509E;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #0074D9;
+        }
+        section {
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        section h1 {
+            color: #003366;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        section h2 {
+            color: #003366;
+        }
+        code {
+            display: block;
+            background: #f4f4f4;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            border-left: 4px solid #003366;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 0.5rem;
+            background: #003366;
+            color: white;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#justificacion">Justificación</a>
+            <a href="#instalacion">Instalación</a>
+            <a href="#primeros_pasos">Primeros Pasos</a>
+            <a href="#utilizacion">Utilización</a>
+            <a href="#conclusiones">Conclusiones</a>
+        </nav>
+    </header>
+
+    <section id="justificacion">
+        <h1>Tutorial de Framework</h1>
+        <h2>Justificación</h2>
+        <p>Angular es un framework de JavaScript utilizado para crear aplicaciones dinámicas y de alta calidad.</p>
+        <p>Se destaca por su capacidad de manejar interfaces complejas de usuario y su compatibilidad con aplicaciones de una sola página (SPA).</p>
+        <p><strong>Aplicaciones comunes:</strong></p>
+        <ul>
+            <li>Desarrollo de aplicaciones empresariales.</li>
+            <li>Aplicaciones de escritorio progresivas (PWA).</li>
+            <li>Paneles de control interactivos.</li>
+        </ul>
+        <p><strong>Prerrequisitos necesarios:</strong></p>
+        <ul>
+            <li>Conocimiento básico de JavaScript, HTML y CSS.</li>
+            <li>Node.js y npm instalados en el sistema.</li>
+            <li>Editor de texto recomendado: Visual Studio Code.</li>
+        </ul>
+    </section>
+
+    <section id="instalacion">
+        <h2>Instalación</h2>
+        <p><strong>Windows:</strong></p>
+        <ol>
+            <li>Descargar e instalar Node.js desde su <a href="https://nodejs.org" target="_blank">página oficial</a>.</li>
+            <li>Verificar instalación:</li>
+            <code>
+                node -v
+                npm -v
+            </code>
+            <li>Instalar Angular CLI:</li>
+            <code>
+                npm install -g &#64;angular/cli
+            </code>
+        </ol>
+        <p><strong>Linux (WSL):</strong></p>
+        <ol>
+            <li>Instalar Node.js utilizando nvm (Node Version Manager):</li>
+            <code>
+                curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+                nvm install --lts
+            </code>
+            <li>Instalar Angular CLI:</li>
+            <code>
+                npm install -g &#64;angular/cli
+            </code>
+        </ol>
+        <p><strong>MacOS:</strong> Sigue pasos similares a Linux utilizando brew para instalar Node.js.</p>
+        <p><strong>Comprobación de instalación:</strong></p>
+        <p> Utiliza el siguiente comando para comprobar si ya tienes instalado Angular</p>
+        <code>
+            ng version
+        </code>
+        <p>Si todo ha ido bien, deberías ver algo como esto:</p>
+        <img src="assets/img/1-confirmacionangular.png" alt="Captura de 1-confirmacionangular">
+        <p><strong>Crea tu primer proyecto:</strong></p>
+        <p>Utiliza el siguiente comando para crear tu primer proyecto angular "ng new" seguido del nombre del proyecto, por ejemplo, aquí lo llamaremos "proyecto-tutorial1</p>
+        <code>
+            ng new proyecto-tutorial1
+        </code>
+        <p>Se creará el Proyecto, escoge CSS (pulsando ENTER), continúa pulsando "y", "y". En la siguiente captura de mostramos un ejemplo</p>
+        <img src="assets/img/2-nuevoproyectoangular.png" alt="Captura de 2-nuevoproyectoangular">
+        <img src="assets/img/3-confirmacionproyectocreado.png" alt="Captura de 3-confirmacionproyectocreado">
+        <p>Una vez creado el proyecto, ahora comprobaremos que esté funcionando y para ello necesitamos</p>
+        <ul>
+            <li>1- Acceder al proyecto, con el comando "cd"</li>
+            <li>2- Una vez dentro del proyecto, poner en marcha el servidor en el comando "ng serve"</li>
+        </ul>
+        <p>A continuación vemos un ejemplo con nuestro proyecto "proyecto-tutorial1" creado</p>
+        <code>
+            cd proyecto-tutorial1
+            ng serve
+        </code> 
+        <img src="assets/img/4-ponerservidorenmarcha.png" alt="Captura de 4-ponerservidorenmarcha">
+        <p>Verifica que la aplicación esté disponible en <a href="http://localhost:4200/" target="_blank">http://localhost:4200/</a>.</p>
+        <p>Deberías ver esto:</p>
+        <img src="assets/img/5-helloproyectoangular.png" alt="Captura de 5-helloproyectoangular">
+    </section>
+
+    <section id="primeros_pasos">
+        <h2>Primeros Pasos</h2>
+        <p>Para crear un proyecto básico, utiliza el comando:</p>
+        <code>
+            ng new hola-mundo
+        </code>
+        <p>Esto generará una estructura de archivos que incluye:</p>
+        <ul>
+            <li><strong>app.component.html:</strong> Archivo principal donde se define la vista.</li>
+            <li><strong>app.module.ts:</strong> Archivo de configuración del módulo principal.</li>
+        </ul>
+        <p>Ejemplo de app.component.html:</p>
+        <code>
+            &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+        </code>
+        <p>Abre el navegador en <a href="http://localhost:4200/" target="_blank">http://localhost:4200/</a> para ver el mensaje "Hola Mundo".</p>
+        <p>Deberías ver esto:</p>
+        <img src="img/primeros_pasos.png" alt="Captura de Primeros Pasos"/>
+    </section>
+
+    <section id="utilizacion">
+        <h2>Utilización del Framework</h2>
+        <p><strong>Crear un nuevo componente:</strong></p>
+        <code>
+            ng generate component about
+        </code>
+        <p>Esto generará un componente "about" que se puede utilizar para mostrar información adicional.</p>
+        <p><strong>Configurar enrutamiento:</strong></p>
+        <code>
+            ng generate module app-routing --flat --module=app
+        </code>
+        <p>Añade rutas en el archivo app-routing.module.ts:</p>
+        <code>
+            const routes: Routes = [
+                {{ '{' }} path: 'about', component: AboutComponent {{ '}' }}
+            ];
+        </code>
+        
+        <p><strong>Agregar Angular Material:</strong></p>
+        <code>
+            ng add &#64;angular/material
+        </code>
+        <p>Ejemplo de barra de navegación:</p>
+        <code>
+            &lt;mat-toolbar color="primary"&gt;
+                &lt;span&gt;Mi Aplicación&lt;/span&gt;
+            &lt;/mat-toolbar&gt;
+        </code>
+        <p>Deberías ver esto:</p>
+        <img src="img/utilizacion.png" alt="Captura de Utilización"/>
+    </section>
+
+    <section id="conclusiones">
+        <h2>Conclusiones</h2>
+        <p>En este tutorial, aprendiste:</p>
+        <ul>
+            <li>Instalación del framework en diferentes sistemas.</li>
+            <li>Creación y configuración de componentes.</li>
+            <li>Manejo básico de rutas y estilos.</li>
+        </ul>
+        <p><strong>Reflexión:</strong> Angular es una excelente opción para proyectos escalables debido a su robustez y flexibilidad. Se recomienda aprender sobre servicios y manejo de datos con RxJS para profundizar en su uso.</p>
+        <p>¡Sigue explorando Angular para dominar su potencial!</p>
+        <p>Deberías ver esto:</p>
+        <img src="img/conclusiones.png" alt="Captura de Conclusiones"/>
+    </section>
+
+    <footer>
+        <p>Tutorial creado por Judit Johana Morel Arce</p>
+    </footer>
+</body>
+</html>
