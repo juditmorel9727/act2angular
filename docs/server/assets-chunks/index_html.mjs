@@ -1,7 +1,7 @@
 export default `<!DOCTYPE html><html lang="en" data-beasties-container><head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="utf-8">
   <title>TutorialAngularjudit</title>
-  <base href="/">
+  <base href="/tutorial-angularjudit/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Tutorial Angular por Judit">
   <link rel="icon" type="image/x-icon" href="favicon.ico">

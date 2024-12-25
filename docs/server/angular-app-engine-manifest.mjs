@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: '/tutorial-angularjudit/',
   entryPoints: {
     '': () => import('./main.server.mjs')
   },
