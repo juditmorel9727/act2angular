@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tutorial-angularjudit": {
+    "proyecto-tutorial1": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/proyecto-tutorial1",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -30,7 +30,11 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "baseHref": "/tutorial-angularjudit/"
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -60,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "tutorial-angularjudit:build:production"
+              "buildTarget": "proyecto-tutorial1:build:production"
             },
             "development": {
-              "buildTarget": "tutorial-angularjudit:build:development"
+              "buildTarget": "proyecto-tutorial1:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,22 +84,21 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/styles.css"
             ],
             "scripts": []
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
   },
   "cli": {
-    "analytics": "5919984b-f45c-4461-bae9-b5189857a889"
+    "analytics": "046e1d5d-0df6-4920-b80d-2991c6731098"
   }
 }
